@@ -1,0 +1,2 @@
+@interface Base
+@end
