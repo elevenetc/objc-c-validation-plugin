@@ -34,6 +34,7 @@
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <add-to-group group-id="Diff.EditorPopupMenu" anchor="last"/>
         </action>
     </actions>
 </idea-plugin>
