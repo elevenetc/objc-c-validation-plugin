@@ -1,5 +1,6 @@
 # Objective-C validation IJ plugin
 Plugin for validation Objective-C code.
+![screenshot](docs/context-menu-screenshot.png)
 ## Build
 1. Checkout repository
 2. `./gradlew buildPlugin`
