@@ -1,5 +1,6 @@
 package org.example.objcvalidator
 
+import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
@@ -28,6 +29,10 @@ class ValidateObjCHeader : AnAction() {
         } else {
             event.presentation.isEnabledAndVisible = false
         }
+    }
+
+    override fun getActionUpdateThread(): ActionUpdateThread {
+        return ActionUpdateThread.BGT
     }
 
     override fun actionPerformed(@NotNull event: AnActionEvent) {
@@ -87,7 +92,6 @@ sealed class Source(val name: String) {
     data object Clipboard : Source("Clipboard")
     data object Editor : Source("Editor")
     data object SelectedCode : Source("Selected code")
-    data object Undefined : Source("Undefined")
 }
 
 private fun VirtualFile?.toString(): String {
